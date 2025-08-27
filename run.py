@@ -1,12 +1,8 @@
 import argparse
-def WGC():
-    print("running WGC")
-def IDS(domain):
-    print(f"running IDS on {domain.__name__}")
-def BFS(domain):
-    print(f"running BFS on {domain.__name__}")
+from domains import wgc
+from core import *
 DOMAINS = {
-    'wgc' : WGC
+    'wgc' : wgc.WGC()
 }
 ALGORITHMS = {
     'bfs': BFS,
