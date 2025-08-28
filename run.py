@@ -16,7 +16,6 @@ def main():
     args = parser.parse_args()
     domain = DOMAINS[args.domain]
     search = ALGORITHMS[args.algo]
-
     search(domain)
 if __name__ == "__main__":
     main()
