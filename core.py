@@ -110,7 +110,6 @@ def DLS(node, depthLimit, metrics):
             if newState not in seen:
                 seen.add(newState)
                 frontier.append((newState, depth + 1))
-            print(frontier)
             metrics['frontier size'] = max(metrics['frontier size'], len(frontier))
     return None
 
