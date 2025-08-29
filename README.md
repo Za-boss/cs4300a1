@@ -1,5 +1,7 @@
 To run use this command:
 python3 ./run.py --domain wgc --algo bfs --conf conf1
+
+
 bfs can be replaced with ids and conf1 can be replaced with conf2
 
 conf options: conf1, conf2
