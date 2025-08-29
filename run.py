@@ -53,6 +53,6 @@ def main():
         print("Path:")
         for i in range(len(result[0]) - 1):
             print(f'{i+1}) {result[0][i]} --> {result[0][i+1]}')
-        print(f'Cost: {result[1]}')
+        print(f'Domain: WGC')
 if __name__ == "__main__":
     main()
