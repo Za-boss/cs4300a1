@@ -22,7 +22,9 @@ class WGC():
         self.cost = cost
     def presentActions(self):
         bank = self.leftBank if self.leftBank['Farmer'] else self.rightBank
-        return [obj for obj in bank if obj != 'Farmer' and bank[obj]]
+        actions = [obj for obj in bank if obj != 'Farmer' and bank[obj]]
+        actions.append(None)
+        return actions
     def move(self, item):
         left_copy = self.leftBank.copy()
         right_copy = self.rightBank.copy()
@@ -42,7 +44,7 @@ class WGC():
             dst[item] = True
         return WGC(parent=self, leftBank=left_copy, rightBank=right_copy, goalBank=self.goalBank)
     def testGoalMet(self):
-        goalBank = self.rightBank if self.goalBank else self.leftBank
+        goalBank = self.rightBank if self.goalBank == 1 else self.leftBank
         return all(goalBank[item] for item in ['Farmer', 'Wolf', 'Goat', 'Cabbage'])
     def bankIsDangerous(self, bank):
         farmer = bank['Farmer']
